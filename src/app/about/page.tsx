@@ -43,7 +43,10 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-primary-dark py-24 sm:py-32 text-center text-white">
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"
+        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80")' }}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn direction="up">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-sans">

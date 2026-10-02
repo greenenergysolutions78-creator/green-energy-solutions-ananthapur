@@ -1,33 +1,58 @@
-import { Factory, Sprout, Building2, Zap, GraduationCap, Stethoscope, Store, Warehouse } from "lucide-react";
+import { 
+  Factory, 
+  Sprout, 
+  Building2, 
+  Zap, 
+  GraduationCap, 
+  Stethoscope, 
+  Store, 
+  Snowflake,
+  Hammer,
+  Droplet,
+  Tractor,
+  Shirt,
+  Fuel,
+  Wheat,
+  Bed,
+  Film
+} from "lucide-react";
 import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-  title: "Industries We Serve | Green Energy Solutions",
+  title: "Our Expertise | Green Energy Solutions",
   description: "Customized solar solutions for factories, agriculture, schools, hospitals, and commercial real estate.",
 };
 
 const industries = [
-  { name: "Industrial Factories", icon: Factory },
   { name: "Poultry Farms", icon: Sprout },
-  { name: "Schools & Colleges", icon: GraduationCap },
-  { name: "Hospitals", icon: Stethoscope },
+  { name: "Industrial Factories", icon: Factory },
+  { name: "Schools, Colleges", icon: GraduationCap },
   { name: "Apartments & Housing Complexes", icon: Building2 },
-  { name: "Cold Storage", icon: Warehouse },
-  { name: "Textile Industries", icon: Factory },
-  { name: "Hotels & Convention Halls", icon: Store },
-  { name: "Agricultural Water Pumps", icon: Zap },
-  { name: "Rice Mills", icon: Factory },
+  { name: "Cold Storage", icon: Snowflake },
+  { name: "Handicraft Units", icon: Hammer },
+  { name: "Drinking Water Plants", icon: Droplet },
+  { name: "Agricultural Water Pumps", icon: Tractor },
+  { name: "Textile Industries", icon: Shirt },
+  { name: "Convention Halls", icon: Store },
+  { name: "Fuel Stations", icon: Fuel },
+  { name: "Rice Mills", icon: Wheat },
+  { name: "Hotels", icon: Bed },
+  { name: "Movie Theaters", icon: Film },
+  { name: "Hospitals", icon: Stethoscope },
 ];
 
 export default function IndustriesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <section className="bg-primary-dark py-24 sm:py-32 text-center text-white">
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"
+        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?auto=format&fit=crop&w=1920&q=80")' }}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn direction="up">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-sans">
-              Solar Solutions Across Industries
+              Our Expertise Covers All Sectors
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.2}>

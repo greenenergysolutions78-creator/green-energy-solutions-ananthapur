@@ -1,32 +1,27 @@
 import Link from "next/link";
-import { Settings, Hammer, PenTool, BarChart3, ShieldCheck, Wrench, SearchCode } from "lucide-react";
+import { PenTool, Headphones, Users, BarChart3, Wrench } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-  title: "End-to-End Solar Services | Green Energy Solutions",
-  description: "Comprehensive EPC solar services including consulting, system design, installation, maintenance, and net metering support.",
+  title: "Our Services | Green Energy Solutions",
+  description: "Comprehensive solar services including designing, consulting, support, technical staff, net metering, and maintenance.",
 };
 
 const services = [
   {
-    name: "Solar Consulting",
-    description: "Expert project consultation, site feasibility analysis, requirements assessment and customized solution planning.",
-    icon: SearchCode,
-  },
-  {
-    name: "System Design",
-    description: "Customized, high-efficiency solar system engineering and design based on precise project requirements.",
+    name: "Designing & Free Consulting",
+    description: "Expert project consultation, site feasibility analysis, and customized, high-efficiency solar system engineering & design.",
     icon: PenTool,
   },
   {
-    name: "EPC Services",
-    description: "Complete Engineering, Procurement, and Construction services managing the entire lifecycle of your solar project.",
-    icon: Settings,
+    name: "Sales & Customer Support",
+    description: "Dedicated sales assistance and rapid-response customer support for all your solar energy inquiries.",
+    icon: Headphones,
   },
   {
-    name: "Installation",
-    description: "Professional solar system installation and project execution by our certified engineering team.",
-    icon: Hammer,
+    name: "Technical Staff",
+    description: "Professional installation and project execution by our certified engineering and technical team.",
+    icon: Users,
   },
   {
     name: "Net Metering Services",
@@ -34,14 +29,9 @@ const services = [
     icon: BarChart3,
   },
   {
-    name: "Maintenance",
-    description: "Preventive and corrective maintenance services to ensure your solar plant operates at peak efficiency.",
+    name: "Free Maintenance (On-Grid Solar)",
+    description: "Preventive and corrective maintenance services at no extra cost to ensure your on-grid solar plant operates at peak efficiency.",
     icon: Wrench,
-  },
-  {
-    name: "Technical Support",
-    description: "Rapid-response technical assistance and troubleshooting for all installed solar energy systems.",
-    icon: ShieldCheck,
   },
 ];
 
@@ -49,11 +39,14 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-primary-dark py-24 sm:py-32 text-center text-white">
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"
+        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80")' }}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn direction="up">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-sans">
-              End-to-End Solar Services
+              Our Services
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.2}>

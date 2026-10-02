@@ -12,7 +12,10 @@ export default function SolutionsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-primary-dark py-24 sm:py-32 text-center text-white">
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"
+        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1920&q=80")' }}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn direction="up">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-sans">

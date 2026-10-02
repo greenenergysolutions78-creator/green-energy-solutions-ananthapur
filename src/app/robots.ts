@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://greenenergysolutions.in'; // Default/placeholder URL
+  const baseUrl = 'https://greenenergysolutions.energy'; // Default/placeholder URL
 
   return {
     rules: {

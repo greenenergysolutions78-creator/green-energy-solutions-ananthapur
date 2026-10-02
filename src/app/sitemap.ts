@@ -4,7 +4,7 @@ import Blog from '@/models/Blog';
 import Project from '@/models/Project';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://greenenergysolutions.in';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://greenenergysolutions.energy';
 
   // Get dynamic routes
   await connectToDatabase();

@@ -197,7 +197,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-brand-text sm:text-4xl">
-              Solar Solutions Across Industries
+              Our Expertise Covers All Sectors
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted">
               We design custom solar power systems tailored to the specific energy requirements of your industry.

@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://greenenergysolutions.energy"),
   title: "Green Energy Solutions | Powering Progress with Purpose",
   description: "End-to-end solar solutions for residential, commercial, industrial and institutional properties in Ananthapur.",
   icons: {

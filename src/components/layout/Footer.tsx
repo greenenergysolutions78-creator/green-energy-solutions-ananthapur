@@ -39,7 +39,7 @@ export default function Footer() {
               <li><Link href="/solutions#rooftop" className="text-sm leading-6 text-gray-300 hover:text-white transition">Rooftop Solar</Link></li>
               <li><Link href="/solutions#ground-mount" className="text-sm leading-6 text-gray-300 hover:text-white transition">Ground Mount</Link></li>
               <li><Link href="/solutions#floating" className="text-sm leading-6 text-gray-300 hover:text-white transition">Floating Solar</Link></li>
-              <li><Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white transition">EPC Services</Link></li>
+              <li><Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white transition">Our Services</Link></li>
             </ul>
           </div>
           
