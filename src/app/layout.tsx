@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -39,6 +41,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LayoutWrapper>
           {children}
         </LayoutWrapper>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
