@@ -25,6 +25,7 @@ The website must function as:
 * Long-term SEO asset
 * Admin-managed content platform
 
+
 ---
 
 # 2. Company Information
