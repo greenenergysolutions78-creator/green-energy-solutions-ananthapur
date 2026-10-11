@@ -1,12 +1,48 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Factory, Sun, Droplets, Building2, Zap, Sprout, ClipboardList, HardHat, SunMedium, Wrench, Quote, Star } from "lucide-react";
+import {
+  ArrowRight,
+  Factory,
+  Sun,
+  Droplets,
+  Building2,
+  Zap,
+  Sprout,
+  ClipboardList,
+  HardHat,
+  SunMedium,
+  Wrench,
+  Quote,
+  Star,
+  GraduationCap,
+  Stethoscope,
+  Snowflake,
+  Droplet,
+  Tractor,
+  Fuel,
+  Wheat,
+  Film
+} from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 import FaqSection from "@/components/ui/FaqSection";
 import connectToDatabase from "@/lib/mongodb";
 import Settings from "@/models/Settings";
 import Testimonial from "@/models/Testimonial";
+
+const industries = [
+  { name: "Poultry Farms", icon: Sprout, image: "/images/poultry-farms.png" },
+  { name: "Industrial Factories", icon: Factory, image: "/images/industrial-factories.png" },
+  { name: "Schools, Colleges", icon: GraduationCap, image: "/images/Schools-colleges.png" },
+  { name: "Apartments & Housing Complexes", icon: Building2, image: "/images/apartments-housing-complexes.png" },
+  { name: "Cold Storage", icon: Snowflake, image: "/images/cold-storage.png" },
+  { name: "Drinking Water Plants", icon: Droplet, image: "/images/drinking-water-plants.png" },
+  { name: "Agricultural Water Pumps", icon: Tractor, image: "/images/agricultural-water-pumps.png" },
+  { name: "Fuel Stations", icon: Fuel, image: "/images/fuel-stations.png" },
+  { name: "Rice Mills", icon: Wheat, image: "/images/rice-mills.png" },
+  { name: "Movie Theaters", icon: Film, image: "/images/movie-theaters-solor.png" },
+  { name: "Hospitals", icon: Stethoscope, image: "/images/hospitals-solor-installed.png" },
+];
 
 export const dynamic = 'force-dynamic';
 
@@ -14,7 +50,7 @@ export default async function Home() {
   await connectToDatabase();
   const settings = await Settings.findOne().lean();
   const testimonials = await Testimonial.find({ published: true }).sort({ createdAt: -1 }).lean();
-  
+
   const stats = settings || {
     statsProjectsCompleted: "100+",
     statsMwInstalled: "50+",
@@ -24,11 +60,11 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="relative bg-primary-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-primary opacity-90 z-0"></div>
-        {/* Placeholder for background image */}
-        <div className="absolute inset-0 bg-[url('/hero_solar.jpg')] bg-cover bg-center mix-blend-overlay opacity-40 z-0"></div>
-        
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat text-white overflow-hidden"
+        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/agricultural-water-pumps.png")' }}
+      >
+
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
           <div className="max-w-3xl">
             <FadeIn direction="up" delay={0.1}>
@@ -66,15 +102,13 @@ export default async function Home() {
             <FadeIn direction="right">
               <div className="relative h-96 lg:h-[500px] w-full rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm flex items-center justify-center">
                 <div className="text-center p-6 text-gray-400">
-                  <Image 
-                  src="/owner.png" 
-                  alt="Owner" 
-                  width={500} 
-                  height={500} 
-                  className="rounded-2xl shadow-sm" 
+                  <Image
+                    src="/owner.png"
+                    alt="Owner"
+                    width={650}
+                    height={650}
+                    className="rounded-2xl shadow-sm"
                   />
-                  <p className="font-medium text-sm">Owner Photo Placeholder</p>
-                  <p className="text-xs mt-1">Update via Admin CMS or code replacement</p>
                 </div>
               </div>
             </FadeIn>
@@ -114,7 +148,7 @@ export default async function Home() {
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
-              
+
               {/* Solution 1 */}
               <FadeIn direction="up" delay={0.1}>
                 <div className="flex flex-col bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition">
@@ -203,29 +237,40 @@ export default async function Home() {
               We design custom solar power systems tailored to the specific energy requirements of your industry.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            <div className="flex flex-col items-center justify-center rounded-xl bg-gray-50 p-6 text-center border border-gray-100">
-              <Factory className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold text-brand-text">Industrial Factories</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded-xl bg-gray-50 p-6 text-center border border-gray-100">
-              <Sprout className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold text-brand-text">Agriculture & Poultry</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded-xl bg-gray-50 p-6 text-center border border-gray-100">
-              <Building2 className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold text-brand-text">Schools & Colleges</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded-xl bg-gray-50 p-6 text-center border border-gray-100">
-              <Zap className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold text-brand-text">Commercial Spaces</h3>
-            </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
+              <FadeIn key={industry.name} direction="up" delay={(index % 4) * 0.1}>
+                <Link
+                  href="/industries"
+                  className="flex h-full flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300 group"
+                >
+                  <div className="relative h-44 w-full overflow-hidden bg-gray-100">
+                    <Image
+                      src={industry.image}
+                      alt={industry.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
+                    <div className="absolute bottom-3 left-3 p-2 rounded-xl bg-white/90 backdrop-blur-xs text-primary shadow-xs">
+                      <industry.icon className="h-5 w-5" />
+                    </div>
+                  </div>
+                  <div className="p-5 flex flex-col flex-1 justify-center bg-white">
+                    <h3 className="font-semibold text-brand-text group-hover:text-primary transition-colors">
+                      {industry.name}
+                    </h3>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
           </div>
-          
+
           <div className="mt-12 text-center">
-            <Link href="/industries" className="text-sm font-semibold leading-6 text-primary flex items-center justify-center gap-1 hover:text-primary-dark">
-              View All Industries <ArrowRight className="h-4 w-4" />
+            <Link href="/industries" className="text-sm font-semibold leading-6 text-primary inline-flex items-center justify-center gap-1 hover:text-primary-dark">
+              View All Industries & Specialized Assessment <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -281,7 +326,7 @@ export default async function Home() {
               Our 4-Step Process to Solar Independence
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FadeIn direction="up" delay={0.1}>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative text-center">
@@ -291,7 +336,7 @@ export default async function Home() {
                 <p className="text-muted text-sm">We analyze your energy needs, site feasibility, and design a customized roadmap.</p>
               </div>
             </FadeIn>
-            
+
             <FadeIn direction="up" delay={0.2}>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative text-center">
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-accent text-white w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-gray-50">2</div>
@@ -300,7 +345,7 @@ export default async function Home() {
                 <p className="text-muted text-sm">Our engineers craft an optimal, high-efficiency system tailored precisely to your facility.</p>
               </div>
             </FadeIn>
-            
+
             <FadeIn direction="up" delay={0.3}>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative text-center">
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-accent text-white w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-gray-50">3</div>
@@ -309,7 +354,7 @@ export default async function Home() {
                 <p className="text-muted text-sm">Certified technicians install the panels with strict adherence to safety and quality standards.</p>
               </div>
             </FadeIn>
-            
+
             <FadeIn direction="up" delay={0.4}>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative text-center">
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-accent text-white w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-gray-50">4</div>
@@ -360,7 +405,7 @@ export default async function Home() {
       {/* 8. FAQ SECTION */}
       <FaqSection />
 
-    
+
       {/* 9. CALL TO ACTION */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">

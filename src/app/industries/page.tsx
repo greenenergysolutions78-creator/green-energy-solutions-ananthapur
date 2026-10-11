@@ -2,21 +2,17 @@ import {
   Factory, 
   Sprout, 
   Building2, 
-  Zap, 
   GraduationCap, 
   Stethoscope, 
-  Store, 
   Snowflake,
-  Hammer,
   Droplet,
   Tractor,
-  Shirt,
   Fuel,
   Wheat,
-  Bed,
   Film
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
@@ -25,21 +21,17 @@ export const metadata = {
 };
 
 const industries = [
-  { name: "Poultry Farms", icon: Sprout },
-  { name: "Industrial Factories", icon: Factory },
-  { name: "Schools, Colleges", icon: GraduationCap },
-  { name: "Apartments & Housing Complexes", icon: Building2 },
-  { name: "Cold Storage", icon: Snowflake },
-  { name: "Handicraft Units", icon: Hammer },
-  { name: "Drinking Water Plants", icon: Droplet },
-  { name: "Agricultural Water Pumps", icon: Tractor },
-  { name: "Textile Industries", icon: Shirt },
-  { name: "Convention Halls", icon: Store },
-  { name: "Fuel Stations", icon: Fuel },
-  { name: "Rice Mills", icon: Wheat },
-  { name: "Hotels", icon: Bed },
-  { name: "Movie Theaters", icon: Film },
-  { name: "Hospitals", icon: Stethoscope },
+  { name: "Poultry Farms", icon: Sprout, image: "/images/poultry-farms.png" },
+  { name: "Industrial Factories", icon: Factory, image: "/images/industrial-factories.png" },
+  { name: "Schools, Colleges", icon: GraduationCap, image: "/images/Schools-colleges.png" },
+  { name: "Apartments & Housing Complexes", icon: Building2, image: "/images/apartments-housing-complexes.png" },
+  { name: "Cold Storage", icon: Snowflake, image: "/images/cold-storage.png" },
+  { name: "Drinking Water Plants", icon: Droplet, image: "/images/drinking-water-plants.png" },
+  { name: "Agricultural Water Pumps", icon: Tractor, image: "/images/agricultural-water-pumps.png" },
+  { name: "Fuel Stations", icon: Fuel, image: "/images/fuel-stations.png" },
+  { name: "Rice Mills", icon: Wheat, image: "/images/rice-mills.png" },
+  { name: "Movie Theaters", icon: Film, image: "/images/movie-theaters-solor.png" },
+  { name: "Hospitals", icon: Stethoscope, image: "/images/hospitals-solor-installed.png" },
 ];
 
 export default function IndustriesPage() {
@@ -65,12 +57,28 @@ export default function IndustriesPage() {
 
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <FadeIn key={industry.name} direction="up" delay={(index % 4) * 0.1}>
-                <div className="flex h-full flex-col items-center justify-center p-8 text-center bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary-light transition-colors group">
-                  <industry.icon className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-semibold text-brand-text">{industry.name}</h3>
+                <div className="flex h-full flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300 group">
+                  <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                    <Image
+                      src={industry.image}
+                      alt={industry.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
+                    <div className="absolute bottom-3 left-3 p-2 rounded-xl bg-white/90 backdrop-blur-xs text-primary shadow-xs">
+                      <industry.icon className="h-5 w-5" />
+                    </div>
+                  </div>
+                  <div className="p-5 flex flex-col flex-1 justify-center bg-white">
+                    <h3 className="font-semibold text-brand-text group-hover:text-primary transition-colors">
+                      {industry.name}
+                    </h3>
+                  </div>
                 </div>
               </FadeIn>
             ))}

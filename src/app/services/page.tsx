@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PenTool, Headphones, Users, BarChart3, Wrench } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
+import Image from "next/image";
 
 export const metadata = {
   title: "Our Services | Green Energy Solutions",
@@ -41,7 +42,7 @@ export default function ServicesPage() {
       {/* Header */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"
-        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80")' }}
+        style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/hero-services.png")' }}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn direction="up">
