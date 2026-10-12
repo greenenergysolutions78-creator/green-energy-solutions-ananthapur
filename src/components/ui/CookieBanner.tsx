@@ -108,20 +108,25 @@ export default function CookieBanner() {
 
       {/* Preferences Management Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="cookie-preferences-title"
+        >
           <div className="relative w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl text-gray-800 animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between border-b border-gray-100 pb-4">
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-primary" />
-                <h3 className="text-base font-bold text-brand-text">Cookie Consent Preferences</h3>
+                <Shield className="h-5 w-5 text-primary" aria-hidden="true" />
+                <h2 id="cookie-preferences-title" className="text-base font-bold text-brand-text">Cookie Consent Preferences</h2>
               </div>
               <button
                 type="button"
                 onClick={() => setShowModal(false)}
-                className="text-gray-400 hover:text-gray-600 rounded-lg p-1"
-                aria-label="Close"
+                className="text-gray-400 hover:text-gray-600 rounded-lg p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label="Close preferences dialog"
               >
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
 

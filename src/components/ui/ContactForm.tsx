@@ -79,33 +79,62 @@ export default function ContactForm() {
         ) : (
           <>
             <h3 className="text-2xl font-bold tracking-tight text-brand-text mb-6">Send a Message</h3>
-            {error && (
-              <div className="mb-6 p-4 bg-red-50 text-red-700 rounded-md text-sm">
-                {error}
-              </div>
-            )}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <div aria-live="polite" aria-atomic="true">
+              {error && (
+                <div id="contact-error" role="alert" className="mb-6 p-4 bg-red-50 text-red-700 rounded-md text-sm border border-red-200">
+                  {error}
+                </div>
+              )}
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate={false}>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium leading-6 text-brand-text">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium leading-6 text-brand-text">
+                  Full Name <span className="text-red-600" aria-hidden="true">*</span>
+                </label>
                 <div className="mt-2">
-                  <input type="text" name="name" id="name" className="block w-full rounded-md border-0 py-2.5 px-3.5 text-brand-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" required />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autoComplete="name"
+                    aria-required="true"
+                    aria-describedby={error ? "contact-error" : undefined}
+                    className="block w-full rounded-md border-0 py-2.5 px-3.5 text-brand-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                    required
+                  />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium leading-6 text-brand-text">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium leading-6 text-brand-text">
+                  Email Address <span className="text-red-600" aria-hidden="true">*</span>
+                </label>
                 <div className="mt-2">
-                  <input type="email" name="email" id="email" className="block w-full rounded-md border-0 py-2.5 px-3.5 text-brand-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" required />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    aria-required="true"
+                    aria-describedby={error ? "contact-error" : undefined}
+                    className="block w-full rounded-md border-0 py-2.5 px-3.5 text-brand-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                    required
+                  />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium leading-6 text-brand-text">Phone Number</label>
+                <label htmlFor="phone" className="block text-sm font-medium leading-6 text-brand-text">
+                  Phone Number <span className="text-red-600" aria-hidden="true">*</span>
+                </label>
                 <div className="mt-2">
                   <input 
                     type="tel" 
                     name="phone" 
                     id="phone" 
+                    autoComplete="tel"
+                    aria-required="true"
+                    aria-describedby={error ? "contact-error" : undefined}
                     pattern="[\+0-9\s\-\(\)]*" 
                     title="Phone number should only contain numbers, spaces, or +-()" 
                     onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9+() -]/g, ''); }}
@@ -113,12 +142,23 @@ export default function ContactForm() {
                     required 
                   />
                 </div>
+                <p className="mt-1 text-xs text-muted">Format: 10 to 15 digits (e.g. +91 92814 87878)</p>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium leading-6 text-brand-text">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium leading-6 text-brand-text">
+                  Message <span className="text-red-600" aria-hidden="true">*</span>
+                </label>
                 <div className="mt-2">
-                  <textarea name="message" id="message" rows={4} className="block w-full rounded-md border-0 py-2.5 px-3.5 text-brand-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" required></textarea>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={4}
+                    aria-required="true"
+                    aria-describedby={error ? "contact-error" : undefined}
+                    className="block w-full rounded-md border-0 py-2.5 px-3.5 text-brand-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                    required
+                  ></textarea>
                 </div>
               </div>
               
@@ -129,17 +169,26 @@ export default function ContactForm() {
                     name="privacyConsent"
                     type="checkbox"
                     required
+                    aria-required="true"
                     className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
                   />
                 </div>
                 <div className="ml-3 text-sm leading-6">
                   <label htmlFor="privacyConsent" className="text-gray-600">
-                    I have read and understood the <a href="/privacy" target="_blank" className="text-primary hover:underline font-medium">Privacy Policy</a> and agree to Green Energy Solutions processing the information submitted through this form.
+                    I have read and understood the{" "}
+                    <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+                      Privacy Policy <span className="sr-only">(opens in a new tab)</span>
+                    </a>{" "}
+                    and agree to Green Energy Solutions processing the information submitted through this form.
                   </label>
                 </div>
               </div>
               
-              <button type="submit" disabled={loading} className="w-full rounded-md bg-primary px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition disabled:opacity-70 disabled:cursor-not-allowed">
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full rounded-md bg-primary px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition disabled:opacity-70 disabled:cursor-not-allowed"
+              >
                 {loading ? "Sending..." : "Send Message"}
               </button>
             </form>

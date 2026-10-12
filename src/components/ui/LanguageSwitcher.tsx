@@ -133,20 +133,25 @@ export default function LanguageSwitcher() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         aria-expanded={isOpen}
-        aria-haspopup="true"
+        aria-haspopup="listbox"
+        aria-label={`Select language, currently ${selected.label}`}
         title="Change Language"
       >
-        <Globe className="h-3.5 w-3.5 text-primary" />
-        <span className="text-sm leading-none mr-0.5">{selected.flag}</span>
+        <Globe className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+        <span className="text-sm leading-none mr-0.5" aria-hidden="true">{selected.flag}</span>
         <span className="font-medium">{selected.label}</span>
-        <ChevronDown className={`h-3 w-3 text-gray-400 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown className={`h-3 w-3 text-gray-400 transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden="true" />
       </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 rounded-xl bg-white shadow-xl ring-1 ring-black/5 divide-y divide-gray-100 focus:outline-none z-50 animate-in fade-in zoom-in-95 duration-100 py-1">
+        <div
+          role="listbox"
+          aria-label="Supported Languages"
+          className="absolute right-0 mt-2 w-48 rounded-xl bg-white shadow-xl ring-1 ring-black/5 divide-y divide-gray-100 focus:outline-none z-50 animate-in fade-in zoom-in-95 duration-100 py-1"
+        >
           <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-gray-400">
             Select Language
           </div>
@@ -156,6 +161,8 @@ export default function LanguageSwitcher() {
               return (
                 <button
                   key={lang.code}
+                  role="option"
+                  aria-selected={isSelected}
                   onClick={() => changeLanguage(lang.code)}
                   className={`w-full flex items-center justify-between px-3 py-2 text-xs text-left transition-colors ${
                     isSelected
@@ -164,13 +171,13 @@ export default function LanguageSwitcher() {
                   }`}
                 >
                   <span className="flex items-center gap-2">
-                    <span className="text-base">{lang.flag}</span>
+                    <span className="text-base" aria-hidden="true">{lang.flag}</span>
                     <span>
                       {lang.label}
                       {lang.sub && <span className="text-[10px] text-gray-400 ml-1.5 font-normal">({lang.sub})</span>}
                     </span>
                   </span>
-                  {isSelected && <Check className="h-3.5 w-3.5 text-primary" />}
+                  {isSelected && <Check className="h-3.5 w-3.5 text-primary" aria-hidden="true" />}
                 </button>
               );
             })}

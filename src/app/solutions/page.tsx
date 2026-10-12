@@ -87,7 +87,7 @@ export default function SolutionsPage() {
             </FadeIn>
             <FadeIn direction="left" delay={0.2}>
               <div className="relative rounded-3xl h-[400px] overflow-hidden shadow-lg">
-                <Image src="/rooftop_solar.jpg" alt="Rooftop Solar Installation" fill className="object-cover" />
+                <Image src="/rooftop_solar.jpg" alt="Commercial and industrial rooftop solar panel installation with aluminum racking" fill className="object-cover" />
               </div>
             </FadeIn>
           </div>
@@ -98,7 +98,7 @@ export default function SolutionsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
               <div className="relative order-2 lg:order-1 rounded-3xl h-[400px] overflow-hidden shadow-lg">
-                <Image src="/ground_mount_solar.jpg" alt="Ground Mount Solar Installation" fill className="object-cover" />
+                <Image src="/ground_mount_solar.jpg" alt="Utility-scale ground mount solar array mounted on galvanized steel structures" fill className="object-cover" />
               </div>
             </FadeIn>
             <FadeIn direction="left" delay={0.2}>
@@ -169,7 +169,7 @@ export default function SolutionsPage() {
             </FadeIn>
             <FadeIn direction="left" delay={0.2}>
               <div className="relative rounded-3xl h-[400px] overflow-hidden shadow-lg">
-                <Image src="/hero_solar.jpg" alt="Floating Solar Installation" fill className="object-cover" />
+                <Image src="/hero_solar.jpg" alt="Floating solar photovoltaic installation deployed on water surface with HDPE floats" fill className="object-cover" />
               </div>
             </FadeIn>
           </div>
