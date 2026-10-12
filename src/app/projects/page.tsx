@@ -6,8 +6,11 @@ import Project from "@/models/Project";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-  title: "Solar Projects Portfolio | Green Energy Solutions",
-  description: "View our portfolio of successful solar installations across various industries in Ananthapur and beyond.",
+  title: "Solar Installation Projects and Case Studies | Green Energy Solutions",
+  description: "Explore verified solar EPC case studies and completed commercial, rooftop, and agricultural installations across Ananthapur and Andhra Pradesh.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 export const dynamic = 'force-dynamic';

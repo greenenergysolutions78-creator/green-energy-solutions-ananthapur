@@ -3,14 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 
+import ServiceSchema from "@/components/seo/ServiceSchema";
+
 export const metadata = {
-  title: "Solar Solutions | Green Energy Solutions",
-  description: "Explore our comprehensive solar solutions including Rooftop, Ground Mount, and Floating Solar systems for commercial and industrial applications.",
+  title: "Solar Power Solutions for Homes and Businesses | Green Energy Solutions",
+  description: "Explore high-efficiency rooftop solar, ground-mounted solar, and floating solar power solutions engineered for residential, commercial, and industrial facilities in Andhra Pradesh.",
+  alternates: {
+    canonical: "/solutions",
+  },
 };
 
 export default function SolutionsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name="Solar Power Solutions & EPC"
+        description="Comprehensive solar solutions including Rooftop Solar, Ground Mount Solar, and Floating Solar installations."
+        serviceType="Solar EPC and Installation Services"
+        url="/solutions"
+      />
       {/* Header */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"

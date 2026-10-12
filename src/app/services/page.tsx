@@ -3,9 +3,14 @@ import { PenTool, Headphones, Users, BarChart3, Wrench } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 import Image from "next/image";
 
+import ServiceSchema from "@/components/seo/ServiceSchema";
+
 export const metadata = {
-  title: "Our Services | Green Energy Solutions",
-  description: "Comprehensive solar services including designing, consulting, support, technical staff, net metering, and maintenance.",
+  title: "Solar Design, Installation & Maintenance | Green Energy Solutions",
+  description: "Comprehensive solar EPC services: site feasibility design, net metering approvals, turnkey installation, and preventive maintenance in Andhra Pradesh.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 const services = [
@@ -39,6 +44,12 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name="Solar EPC, Engineering & Maintenance Services"
+        description="Full lifecycle solar services including engineering design, net metering liaison, EPC installation, and preventive plant maintenance."
+        serviceType="Solar EPC Services"
+        url="/services"
+      />
       {/* Header */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-24 sm:py-32 text-center text-white"

@@ -6,8 +6,11 @@ import { ArrowRight, Calendar, User } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-  title: "Blog | Green Energy Solutions",
-  description: "Read the latest news, insights, and updates about solar energy and sustainable solutions from Green Energy Solutions.",
+  title: "Solar Energy Guides, Costs and Maintenance | Green Energy Solutions",
+  description: "Expert solar energy guides, net metering procedures, cost calculations, and maintenance advice from solar EPC specialists in Andhra Pradesh.",
+  alternates: {
+    canonical: "/blogs",
+  },
 };
 
 export default async function BlogsPage() {

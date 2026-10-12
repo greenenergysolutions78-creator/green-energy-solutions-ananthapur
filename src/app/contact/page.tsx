@@ -5,8 +5,11 @@ import FaqSection from "@/components/ui/FaqSection";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | Green Energy Solutions",
-  description: "Get in touch with Green Energy Solutions for your solar needs.",
+  title: "Contact Green Energy Solutions in Ananthapur | Solar EPC",
+  description: "Contact Green Energy Solutions in Ananthapur, Andhra Pradesh. Visit our offices or call +91-92814-87878 for commercial, industrial, and residential solar energy consultations.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

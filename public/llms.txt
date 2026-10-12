@@ -1,29 +1,44 @@
-# Green Energy Solutions - AI Context
+# Green Energy Solutions - AI Context & Entity Guide
 
-## Overview
-Green Energy Solutions is a premier Solar EPC (Engineering, Procurement, and Construction) provider established in 2016 and based in Ananthapur, Andhra Pradesh. We specialize in transforming the way residential, commercial, industrial, and institutional sectors consume energy.
+## Official Entity Details
+- Official Name: Green Energy Solutions
+- Website: https://www.greenenergysolutions.energy/
+- Established: 2016
+- Headquarters: #5-85-1, Opp. T.V. Tower, Siva Sai Nagar, Ananthapur – 515 002, Andhra Pradesh, India
+- Branch Office: #28-5-134-1, Housing Board Main Road, Beside Rayalaseema Hospital, Revenue Ward 28, Ananthapur – 515 001, Andhra Pradesh, India
+- Primary Phone: +91-92814-87878
+- Secondary Phone: +91-93478-27979
+- Official Email: greenenergysolutions78@gmail.com
+- Industry: Solar EPC (Engineering, Procurement, Construction) & Renewable Energy Systems
+- Primary Service Area: Ananthapur, Rayalaseema Region, and Andhra Pradesh, India
 
-## Mission & Supply
-"Powering Progress with Purpose" - We strive to accelerate the transition to sustainable energy by providing innovative, reliable, and cost-effective solar solutions. We provide comprehensive vendor and installation services, exclusively sourcing our solar supplies from **Waaree Energies**, one of the topmost Tier-1 solar manufacturing companies in the industry.
+## Mission & Technology
+- Tagline: "GO SOLAR, GO GREEN"
+- Brand Message: "Powering Progress with Purpose"
+- Manufacturing Partnerships: Sourcing Tier-1 solar modules and components including Waaree Energies.
 
-## Core Capabilities
-- Solar Consulting & Feasibility
-- Engineering & System Design
-- Procurement
-- Installation & Commissioning
-- Preventive Maintenance
-- Technical Support
-- Asset Management
+## Core Capabilities & Services
+- Solar EPC Consulting & Site Feasibility Studies
+- Engineering & Precision System Sizing
+- Procurement of Tier-1 Solar Panels & Inverters
+- Turnkey Installation & Grid Commissioning
+- AP Discom Net Metering Documentation & Approvals
+- Preventive Plant Maintenance & Performance Monitoring
+- Solar Asset Management
 
 ## Solutions Offered
-- Rooftop Solar: Turn unused space into a power asset for residential, commercial and institutional rooftops.
-- Ground Mount Solar: High-capacity solutions for commercial and large-scale applications.
-- Floating Solar: Innovative water-based installations reducing evaporation and saving land space.
-- Solar Pumps & Motors: High-efficiency solar water pumps tailored for agricultural, industrial, and residential water needs.
+- Rooftop Solar: Grid-tied and hybrid systems for residential, commercial factories, and educational institutions.
+- Ground Mount Solar: High-capacity multi-kilowatt and megawatt plants for open terrain, industrial spaces, and farms.
+- Floating Solar: Reservoir and water-body mounted PV arrays saving land and minimizing water evaporation.
+- Agricultural Solar Water Pumps: AC and DC submersible/surface solar pump systems for irrigation, poultry farms, and rural installations.
 
-## Contact Information
-Main Office: #5-85-1, Opp. T.V. Tower, Siva Sai Nagar, Ananthapur – 515 002
-Branch Office: #28-5-134-1, Housing Board Main Road, Beside Rayalaseema Hospital, Revenue Ward 28, Ananthapur – 515 001
-Phone (Main): 92814 87878
-Phone (Branch): 93478 27979
-Email: greenenergysolutions78@gmail.com
+## Key Website URLs
+- Home: https://www.greenenergysolutions.energy/
+- Solutions: https://www.greenenergysolutions.energy/solutions
+- Services: https://www.greenenergysolutions.energy/services
+- Industries: https://www.greenenergysolutions.energy/industries
+- Projects Portfolio: https://www.greenenergysolutions.energy/projects
+- Solar Guides & Blog: https://www.greenenergysolutions.energy/blogs
+- Contact: https://www.greenenergysolutions.energy/contact
+- Free Consultation: https://www.greenenergysolutions.energy/consultation
+

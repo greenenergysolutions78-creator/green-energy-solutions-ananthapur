@@ -46,6 +46,15 @@ const industries = [
 
 export const dynamic = 'force-dynamic';
 
+export const metadata = {
+  title: "Solar EPC Company in Ananthapur | Green Energy Solutions",
+  description:
+    "Leading Solar EPC company in Ananthapur, Andhra Pradesh. Specializing in rooftop solar, ground mount solar, floating solar, and agricultural solar pumps with turnkey installation and maintenance.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default async function Home() {
   await connectToDatabase();
   const settings = await Settings.findOne().lean();

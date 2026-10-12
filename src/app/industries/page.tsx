@@ -16,8 +16,11 @@ import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-  title: "Our Expertise | Green Energy Solutions",
-  description: "Customized solar solutions for factories, agriculture, schools, hospitals, and commercial real estate.",
+  title: "Solar Solutions for Industries and Institutions | Green Energy Solutions",
+  description: "Custom commercial and industrial solar installations for factories, rice mills, poultry farms, cold storage, hospitals, and educational institutions across Andhra Pradesh.",
+  alternates: {
+    canonical: "/industries",
+  },
 };
 
 const industries = [

@@ -2,8 +2,11 @@ import { ShieldCheck, Users, Award, Lightbulb, CheckCircle2 } from "lucide-react
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-  title: "About Us | Green Energy Solutions",
-  description: "Learn about Green Energy Solutions, our mission, core values, and solar EPC capabilities.",
+  title: "About Our Solar EPC Company | Green Energy Solutions",
+  description: "Discover Green Energy Solutions: Ananthapur's trusted solar EPC partner delivering rooftop, ground mount, and industrial solar installations across Andhra Pradesh.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const values = [
