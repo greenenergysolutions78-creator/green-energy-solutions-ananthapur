@@ -7,6 +7,13 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata = {
   title: "Contact Green Energy Solutions in Ananthapur | Solar EPC",
   description: "Contact Green Energy Solutions in Ananthapur, Andhra Pradesh. Visit our offices or call +91-92814-87878 for commercial, industrial, and residential solar energy consultations.",
+  keywords: [
+    "Solar Company in Ananthapur Contact",
+    "Green Energy Solutions Phone Number",
+    "Solar EPC Siva Sai Nagar Ananthapur",
+    "Housing Board Main Road Solar Office",
+    "Solar Consultation Andhra Pradesh"
+  ],
   alternates: {
     canonical: "/contact",
   },

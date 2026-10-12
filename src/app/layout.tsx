@@ -27,6 +27,25 @@ export const metadata: Metadata = {
   description:
     "Explore solar EPC, rooftop solar, ground-mounted solar, floating solar and solar pump solutions from Green Energy Solutions in Ananthapur, Andhra Pradesh.",
   applicationName: "Green Energy Solutions",
+  keywords: [
+    "Solar EPC Company Ananthapur",
+    "Solar Panel Installation Ananthapur",
+    "Rooftop Solar Andhra Pradesh",
+    "Commercial Solar Installation",
+    "Industrial Solar Power Plants",
+    "Ground Mount Solar Solutions",
+    "Floating Solar Energy Systems",
+    "Agricultural Solar Water Pumps",
+    "AP Discom Net Metering Solar Approvals",
+    "PM Surya Ghar Muft Bijli Yojana",
+    "Best Solar Company in Ananthapur",
+    "Waaree Solar Panels Ananthapur",
+    "Solar Preventive Maintenance",
+    "On-Grid Solar System Andhra Pradesh",
+    "Solar Energy Solutions Ananthapur",
+    "Turnkey Solar EPC Contractor",
+    "Rayalaseema Solar Power Solutions"
+  ],
   alternates: {
     canonical: "/",
   },
@@ -109,6 +128,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
+        {/* Microsoft Clarity */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ywpejevyos");`,
+          }}
+        />
+        {/* End Microsoft Clarity */}
         <BusinessSchema />
       </head>
       <body className="min-h-full flex flex-col font-sans text-brand-text">

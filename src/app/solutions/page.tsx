@@ -8,6 +8,15 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 export const metadata = {
   title: "Solar Power Solutions for Homes and Businesses | Green Energy Solutions",
   description: "Explore high-efficiency rooftop solar, ground-mounted solar, and floating solar power solutions engineered for residential, commercial, and industrial facilities in Andhra Pradesh.",
+  keywords: [
+    "Rooftop Solar Installation Ananthapur",
+    "Commercial Solar Solutions Andhra Pradesh",
+    "Industrial Ground Mounted Solar",
+    "Floating Solar Power Systems India",
+    "On-Grid Solar System Andhra Pradesh",
+    "Hybrid Solar Power Solutions",
+    "Waaree Solar Panel EPC"
+  ],
   alternates: {
     canonical: "/solutions",
   },

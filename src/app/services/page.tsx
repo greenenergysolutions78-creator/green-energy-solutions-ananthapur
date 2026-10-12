@@ -8,6 +8,14 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 export const metadata = {
   title: "Solar Design, Installation & Maintenance | Green Energy Solutions",
   description: "Comprehensive solar EPC services: site feasibility design, net metering approvals, turnkey installation, and preventive maintenance in Andhra Pradesh.",
+  keywords: [
+    "Solar EPC Services Ananthapur",
+    "Solar Panel Maintenance Andhra Pradesh",
+    "APSPDCL Net Metering Process",
+    "Solar Plant Feasibility Study",
+    "Turnkey Solar Engineering Design",
+    "Solar Inverter Repair Support"
+  ],
   alternates: {
     canonical: "/services",
   },

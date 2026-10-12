@@ -18,6 +18,15 @@ import FadeIn from "@/components/ui/FadeIn";
 export const metadata = {
   title: "Solar Solutions for Industries and Institutions | Green Energy Solutions",
   description: "Custom commercial and industrial solar installations for factories, rice mills, poultry farms, cold storage, hospitals, and educational institutions across Andhra Pradesh.",
+  keywords: [
+    "Solar for Poultry Farms Andhra Pradesh",
+    "Solar Power for Rice Mills Ananthapur",
+    "Industrial Factory Solar EPC",
+    "Cold Storage Solar Plant Installation",
+    "Hospital Solar Rooftop System",
+    "School and College Solar Installations",
+    "Agricultural Solar Water Pumps Ananthapur"
+  ],
   alternates: {
     canonical: "/industries",
   },

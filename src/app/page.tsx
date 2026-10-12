@@ -50,6 +50,16 @@ export const metadata = {
   title: "Solar EPC Company in Ananthapur | Green Energy Solutions",
   description:
     "Leading Solar EPC company in Ananthapur, Andhra Pradesh. Specializing in rooftop solar, ground mount solar, floating solar, and agricultural solar pumps with turnkey installation and maintenance.",
+  keywords: [
+    "Solar EPC Company Ananthapur",
+    "Solar Installation Ananthapur",
+    "Solar Panels Ananthapur",
+    "Rooftop Solar EPC Andhra Pradesh",
+    "Best Solar Company in Ananthapur",
+    "Commercial Solar EPC",
+    "APSPDCL Net Metering Solar",
+    "Agricultural Solar Pump Dealer"
+  ],
   alternates: {
     canonical: "/",
   },
