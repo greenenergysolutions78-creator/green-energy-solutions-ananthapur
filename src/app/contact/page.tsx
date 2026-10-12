@@ -66,19 +66,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-x-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-light">
-                      <MapPin className="h-6 w-6 text-primary" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold leading-7 text-brand-text">Branch Office</h3>
-                      <p className="mt-2 leading-7 text-muted">
-                        #28-5-134-1, Housing Board Main Road,<br />
-                        Beside Rayalaseema Hospital,<br />
-                        Revenue Ward 28, Ananthapur – 515 001
-                      </p>
-                    </div>
-                  </div>
+
 
                   <div className="flex gap-x-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-light">
