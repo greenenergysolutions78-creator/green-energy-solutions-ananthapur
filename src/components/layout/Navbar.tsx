@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -20,35 +21,54 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+    <header className="bg-white/95 backdrop-blur-md shadow-xs border-b border-gray-100 sticky top-0 z-50 transition-all">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-3.5" aria-label="Global">
+        <div className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center -m-1 p-1">
             <span className="sr-only">Green Energy Solutions</span>
-            <Image src="/logo.png" alt="Green Energy Solutions Logo" width={1000} height={1000} className="w-auto h-16 object-contain" priority />
+            <Image
+              src="/logo.png"
+              alt="Green Energy Solutions Logo"
+              width={300}
+              height={80}
+              className="w-auto h-11 sm:h-12 object-contain transition-transform hover:scale-[1.02]"
+              priority
+            />
           </Link>
         </div>
-        <div className="flex lg:hidden">
+
+        {/* Mobile action bar */}
+        <div className="flex items-center gap-2.5 lg:hidden">
+          <LanguageSwitcher />
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2 inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8">
+
+        {/* Desktop nav links */}
+        <div className="hidden lg:flex items-center lg:gap-x-4 xl:gap-x-6 2xl:gap-x-8 mx-4">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-brand-text hover:text-primary transition-colors">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-xs xl:text-sm font-semibold text-brand-text hover:text-primary transition-colors whitespace-nowrap py-1"
+            >
               {item.name}
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+
+        {/* Desktop CTA & Language Switcher */}
+        <div className="hidden lg:flex items-center gap-x-2.5 xl:gap-x-3.5 shrink-0">
+          <LanguageSwitcher />
           <Link
             href="/consultation"
-            className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-opacity-90 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="rounded-lg bg-accent px-3.5 py-2 text-xs xl:text-sm font-semibold text-white shadow-sm hover:bg-amber-600 transition-all whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Get a Consultation
           </Link>

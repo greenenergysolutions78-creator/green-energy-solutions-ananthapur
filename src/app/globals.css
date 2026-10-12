@@ -22,4 +22,26 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+  top: 0px !important;
 }
+
+/* Hide default Google Translate top banner and highlight overlays */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#google_translate_element {
+  display: none;
+}
+

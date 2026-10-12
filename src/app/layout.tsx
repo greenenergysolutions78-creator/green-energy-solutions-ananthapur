@@ -48,11 +48,17 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    languages: {
+      "en": "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Green Energy Solutions",
+    locale: "en_US",
+    alternateLocale: ["en_IN", "en_GB"],
     title: "Green Energy Solutions | Solar EPC & Solar Power Solutions",
     description:
       "Solar energy solutions for homes, businesses, industries and institutions.",
@@ -74,6 +80,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -97,10 +104,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="en-IN"
+      lang="en"
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
+        <meta name="distribution" content="Global" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="target" content="all" />
         {/* Google tag (gtag.js) */}
         <script
           async
